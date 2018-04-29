@@ -96,11 +96,12 @@ public:
 	friend CircularInt operator+(const int num,const CircularInt & h);
 	friend CircularInt operator+(const CircularInt & a,const CircularInt & b);
 	
-
+	//cin & cout
 	friend ostream& operator<<(ostream& os, const CircularInt &m);
 	friend istream& operator>>(istream& os, CircularInt &m);
 };
 
+//cin & cout
 
 inline ostream& operator<<(ostream& os, const CircularInt &m) {
 	os << m.now;
