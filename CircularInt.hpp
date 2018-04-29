@@ -15,6 +15,11 @@ public:
 	CircularInt(int a, int b);
 	CircularInt(const CircularInt& h);
 
+	CircularInt operator--(int);
+	CircularInt& operator--();
+
+	CircularInt operator++(int);
+	CircularInt& operator++();
 
 	CircularInt& operator+=(const int);
 	CircularInt& operator+=(const CircularInt& h);
@@ -28,64 +33,69 @@ public:
 	CircularInt& operator/=(const int);
 	CircularInt& operator/=(const CircularInt& h);
 
-	CircularInt operator--(int);
-	CircularInt& operator--();
 
-	CircularInt operator++(int);
-	CircularInt& operator++();
 
 	CircularInt& operator=(const int);
 	CircularInt& operator=(const CircularInt& h);
 
+	// inline function
+	//חילוק
 	friend CircularInt operator/(const CircularInt& h, int num);
 	friend CircularInt operator/(int num, const CircularInt& h);
 	friend CircularInt operator/(const CircularInt& a, const CircularInt& b);
 
+	//גדול שווה
 	friend int operator>=(const CircularInt& h, int num);
 	friend int operator>=(int num, const CircularInt& h);
 	friend int operator>=(const CircularInt& a, const CircularInt& b);
 
+	//גדול
 	friend int operator>(const CircularInt& h, int num);
 	friend int operator>(int num, const CircularInt& h);
 	friend int operator>(const CircularInt& a, const CircularInt& b);
 
+	//קטן שווה
 	friend int operator<=(const CircularInt& h, int num);
 	friend int operator<=(int num, const CircularInt& h);
 	friend int operator<=(const CircularInt& a, const CircularInt& b);
 
+	// קטן 
 	friend int operator<(const CircularInt& h, int num);
 	friend int operator<(int num, const CircularInt& h);
 	friend int operator<(const CircularInt& a, const CircularInt& b);
 
+	//שווה
 	friend int operator==(const CircularInt& h, int num);
 	friend int operator==(int num, const CircularInt& h);
 	friend int operator==(const CircularInt& a, const CircularInt& b);
-
+	
+	//לא שווה
 	friend int operator!=(const CircularInt& h, int num);
 	friend int operator!=(int num, const CircularInt& h);
 	friend int operator!=(const CircularInt& a, const CircularInt& b);
-
+	
+	//חיסור
 	friend CircularInt operator-(const CircularInt& h);
 	friend CircularInt operator-(const CircularInt& h, const int num);
 	friend CircularInt operator-(const int num, const CircularInt& h);
 	friend CircularInt operator-(const CircularInt& a, const CircularInt& b);
 
+	//חיסור והשמה
 	friend CircularInt operator-=(const CircularInt& h, const int num);
 	friend CircularInt operator-=(const int num, const CircularInt& h);
 	friend CircularInt operator-=(const CircularInt& a, const CircularInt& b);
 
+	//כפל
 	friend CircularInt operator*(const CircularInt& h, const int num);
 	friend CircularInt operator*(const int num, const CircularInt& h);
 	friend CircularInt operator*(const CircularInt& a, const CircularInt& b);
 
+	//חיבור
 	friend CircularInt operator+(const CircularInt& h);
 	friend CircularInt operator+(const CircularInt & h, const int num);
 	friend CircularInt operator+(const int num,const CircularInt & h);
 	friend CircularInt operator+(const CircularInt & a,const CircularInt & b);
-
-	friend CircularInt operator-(const CircularInt & h, const int num);
-	friend CircularInt operator-(const int num,const CircularInt & h);
-	friend CircularInt operator-(const CircularInt & a,const CircularInt & b);
+	
 
 	friend ostream& operator<<(ostream& os, const CircularInt &m);
 	friend istream& operator>>(istream& os, CircularInt &m);
